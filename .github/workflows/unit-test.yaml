@@ -1,0 +1,23 @@
+name: unit-test
+on: [push]
+jobs:
+  unit-test: # job id(Typed by user)
+    name: unit test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository to runner
+      - name: Checkout runner
+        uses: actions/checkout@v3
+
+        #      # react environment
+        #      - name: hogehoge
+        #        uses: actions/hogehoge
+        #        with:
+        #          java-version: '11'
+        #          distribution: 'adopt'
+        #          architecture: x64
+        #
+        #      # run JUnit5 test
+        #      - name: Run the unit test
+        #        run: echo WEP
